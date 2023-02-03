@@ -12,13 +12,13 @@ button {width: 200px; padding: 5px; background-color: $redBrown; border: hidden;
         &:disabled {background-color: $lightOrangeBrown;}}
 p {font-size: 18px;}
 
-.App {background-color: white; padding: 5vw;}
+.App {background-color: white; padding: 10vw;}
 .center {display: flex; flex-direction: column; justify-content: center; align-items: center; 
           margin-top: 15vh; margin-bottom: 15vh; margin-left: 10vw; margin-right: 10vw;}
 .fineprint {width: 60vw; p {font-size: 13px;}}
 .error-msg {color: red; font-style: italic;}
 .inline {display: flex; flex-direction: row; margin: 5px; width: 60vw;
   input {margin: 0px; margin-left: 5px; margin-right: 5px; margin-top: 1px;}}
-.form-div {input {accent-color: $redBrown; width: 275px; height: 30px;}}
+.form-div {input {accent-color: $redBrown; width: 192px; height: 30px;}}
 .submit-btn {margin-top: 5vh;}
 
