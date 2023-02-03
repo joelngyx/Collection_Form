@@ -45,6 +45,9 @@ const Input = (props) => {
         if (/^[0-9]*$/.test(val) === false) {
           setErrorMsg("Only numerics allowed!");
           props.setValid(false);
+        } else if (val > 100) {
+          setErrorMsg("Please provide a valid age");
+          props.setValid(false);
         } else {
           setErrorMsg();
           props.setValid(true);

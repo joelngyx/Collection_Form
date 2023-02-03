@@ -32,8 +32,9 @@ const App = () => {
         "choice_2" : `${choice2}`
       }
 
+      // eslint-disable-next-line
       const postEntry = await fetch(
-        "http://localhost:5500/entries", {
+        "https://collectionform.onrender.com/entries", {
           method: "POST",
           mode: "cors",
           cache: "no-cache",
