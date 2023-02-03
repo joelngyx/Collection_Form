@@ -1,3 +1,24 @@
-* {font-family: 'Courier New', Courier, monospace;}
+@import url('https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400;1,500;1,600;1,700&family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&display=swap');
+* {font-family: 'EB Garamond', serif;}
 
-.center {display: flex; flex-direction: column; justify-content: center; align-items: center; padding-top: 10vh;}
+$orangeBrown: #E8C19C;
+$redBrown: #C1666B;
+$darkGreen: #3F7875;
+$lightOrangeBrown: #Bf9597;
+
+body {background-color: $orangeBrown;}
+button {width: 200px; padding: 5px; background-color: $redBrown; border: hidden; color: white; font-size: 15px;
+        &:hover {background-color: $darkGreen;}
+        &:disabled {background-color: $lightOrangeBrown;}}
+p {font-size: 18px;}
+
+.App {background-color: white; padding: 5vw;}
+.center {display: flex; flex-direction: column; justify-content: center; align-items: center; 
+          margin-top: 15vh; margin-bottom: 15vh; margin-left: 10vw; margin-right: 10vw;}
+.fineprint {width: 60vw; p {font-size: 13px;}}
+.error-msg {color: red; font-style: italic;}
+.inline {display: flex; flex-direction: row; margin: 5px; width: 60vw;
+  input {margin: 0px; margin-left: 5px; margin-right: 5px; margin-top: 1px;}}
+.form-div {input {accent-color: $redBrown; width: 275px; height: 30px;}}
+.submit-btn {margin-top: 5vh;}
+

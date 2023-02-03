@@ -16,12 +16,12 @@ const Input = (props) => {
         setPlaceholder("Provide your age");
         break;
       case "Mobile":
-        setLabel("Mobile number");
-        setPlaceholder("Provide your mobile number without the country code");
+        setLabel("Mobile number (Without the country code)");
+        setPlaceholder("Provide your mobile number");
         break;
       case "OTP":
-        setLabel("OTP")
-        setPlaceholder("Provide the OTP sent to you via WhatsApp");
+        setLabel("OTP (Sent to you via WhatsApp)")
+        setPlaceholder("Provide the OTP sent to you");
         break;
       default:
         break;
@@ -66,25 +66,25 @@ const Input = (props) => {
         }
         break;
       case "OTP":
-        setLabel("OTP")
-        setPlaceholder("Provide the OTP sent to you via WhatsApp");
+        setLabel("OTP (Sent to you via WhatsApp)")
+        setPlaceholder("Provide the OTP sent");
         break;
       default:
         break;
     }
   }
 
-
   return (
     <div>
       <div><p>{label}</p></div>
-      <div><input placeholder={placeholder} 
+      <div className="form-div"><input placeholder={placeholder} 
                   value={props.value} 
                   onChange={(e) => {
                     handleChange(e.target.value);
                   }}></input></div>
       {(props.label === "Mobile") ? <button disabled={props.disabled}>Get OTP</button> : <></>}
-      <div><p>{errorMsg}</p></div>
+      {(props.label === "OTP") ? <button disabled={props.disabled} onClick={props.nextPage}>Submit OTP</button> : <></>}
+      <div><p className="error-msg">{errorMsg}</p></div>
     </div>
   )
 }
